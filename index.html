@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Dead and Wounded</title>
+</head>
+<body>
+    <div class="title">
+        <h1 class="name"> <span class="green">Dead</span> and <span class="blue">Wounded</span> (Numdle)</h1>
+        <p class="rules">Welcome to Dead and Wounded. The rules are simple, the computer generates a number and you have to guess what that number is <br>
+             <em>But that could take forever!</em> <br>
+             That's where the dead and wounded come in. If you guess an integer thats in the right position, that integer would be
+              considered dead and if you guess a correct integer but in the wrong position, it is wounded. <br>
+        </p>
+
+        <div class="example">
+            <strong>Example: </strong> If the computer generates 1234 and
+            <ul>
+                <li>You make a guess of <span class="green">123</span><span class="red">5</span>, that would be 3 dead and 0 wounded. (3 integers in the right positions and one integer thats not in the number to be guessed)</li>
+                <li>A guess of <span class="green">12</span><span class="blue">43</span> woud be 2 dead and 2 wounded 
+                    (All 4 integers are present, two in the right positions and two in the wrong positions) </li>
+                <li>And a guess of <span class="red">5678</span> would be 0 dead and 0 wounded (No correct integer)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="game-area">
+        <div class="log">
+            <h3>History</h3>
+            <ul id="guesses"></ul>
+        </div>
+        <div class="prompt">
+            <h1 id>Enter your guess</h1>
+            
+        </div>
+        <div class="guess-boxes">
+
+            <input class="smol" type="text" placeholder="_" maxlength="1" id="num1"> 
+            <input class="smol" type="text" placeholder="_" maxlength="1" id="num2">
+            <input class="smol" type="text" placeholder="_" maxlength="1" id="num3">
+            <input class="smol" type="text" placeholder="_" maxlength="1" id="num4">
+            <br> <br>
+
+            <button type="submit" class="submit" onclick="deadAndWounded()">Guess</button>
+
+
+            <div class="result-area">
+                <h3 id="result"></h3>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+    <script src="DeadandWounded.js"></script>
+</body>
+</html>
